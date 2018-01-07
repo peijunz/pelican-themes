@@ -74,13 +74,23 @@ body {
     margin-right: 3px;
 }
 
-a, a:hover {
+h1 a{
     color: inherit;
 }
 
-.entry-content a {
-    text-decoration: none;
+.toc a{
+    color: inherit;
     border-bottom: 1px dotted;
+}
+
+.summary a:not(.btn){
+    color: inherit;
+    border-bottom: 1px dotted;
+}
+
+.summary a:not(.btn):hover{
+    text-decoration: none;
+    border-bottom: 1px solid;
 }
 
 .entry-content a:hover {

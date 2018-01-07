@@ -85,9 +85,11 @@
                         {% include "includes/article_info.html" %}
                     </div>
                 </div>
+                {% include 'includes/toc.html' %}
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->
+            {% include 'includes/neighbors.html' %}
             {% include 'includes/related-posts.html' %}
             {% include 'includes/series.html' %}
             {% include 'includes/addthis.html' %}
