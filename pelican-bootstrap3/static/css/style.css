@@ -177,7 +177,8 @@ figure.floatcenter, .align-center {
 
 .categories-timestamp {
     color: #AAAAAA;
-    font-size: 0.9em;
+    font-family: monospace;
+/*    font-size: 0.9em;*/
     margin-right: 10px;
 }
 
