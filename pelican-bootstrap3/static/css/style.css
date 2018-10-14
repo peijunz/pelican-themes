@@ -254,3 +254,7 @@ figure.floatcenter, .align-center {
 .gap-left {
   margin-left: 10px;
 }
+
+.summary h2 {
+    font-size: 28px;
+}
