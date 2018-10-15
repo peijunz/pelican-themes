@@ -23,7 +23,17 @@
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    {% if MATHJAX_CDN %}
+        mathjaxscript.src = '{{ MATHJAX_CDN }}';
+    {% else %}
+        mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js';
+    {% endif %}
+
+    {% if MATHJAX_CONFIG %}
+        mathjaxscript.src += '{{ MATHJAX_CONFIG }}';
+    {% else %}
+        mathjaxscript.src += '?config=TeX-AMS-MML_HTMLorMML';
+    {% endif %}
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
@@ -42,7 +52,6 @@
         "    }, " +
         "    'HTML-CSS': { " +
         " linebreaks: { automatic: true, width: '95% container' }, " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
         "    } " +
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
