@@ -11,10 +11,12 @@
          {% else %}
             {% set copy_date = '' %}
          {% endif %}
-         <div class="col-xs-10">{% if SOURCE_LINK %}  <a href="{{ SOURCE_LINK }}">{{ SITENAME }}</a>{% endif %} &copy; {{ copy_date }} {{ AUTHOR }}
-             &middot; {{ _('Powered by') }} <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
-            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>{% if BUILD_STATUS %} &middot;  {{ BUILD_STATUS }} {% endif %}
+         <div class="col-xs-10">
+         {% if GITHUB_ID %}
+         <i class="fa fa-github fa-lg"></i> <a href="https://github.com/{{ GITHUB_ID }}">{{ GITHUB_ID }}</a><br><br>
+         {% endif %}&copy; {{ copy_date }} {{ AUTHOR }}
+             &middot; {{ _('Powered by') }} <a href="https://github.com/peijunz/ipynb2pelican" target="_blank">ipynb2pelican</a>, <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>
             {% include "includes/busuanzi.html" %}
             {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
               {% from 'includes/cc-license.html' import cc_license_mark %}
