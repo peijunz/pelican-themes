@@ -1,6 +1,16 @@
 body {
+    font-family:Helvetica,Arial,sans-serif;
+    font-size:16px;
     color: #111;
     padding-top: 70px;
+}
+
+blockquote {
+    font-size:16px;
+}
+
+code, kbd, pre, samp {
+    font-family: Menlo,Monaco,Consolas,"Source Code Pro","Courier New",monospace;
 }
 
 #sidebar .list-group, #sidebar .list-group-item {
