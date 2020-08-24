@@ -20,6 +20,7 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{tag.slug}}">{{ tag }} <span class="badge pull-right">{{ articles|count }}</span></a>
+			<a href="{{ SITEURL }}/{{ tag.url }}"><i class="fa fa-external-link"></i></a>
                     </h4>
                 </div>
                 <div id="collapse-{{tag.slug}}" class="panel-collapse collapse">
